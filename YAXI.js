@@ -111,3 +111,69 @@ jano.on("guildMemberAdd", member => {
     .setTimestamp();
   channel.send(joinembed);
 });
+
+////////////// code left
+yaxi.on("guildMemberRemove", member => {
+  const channel = member.guild.channels.cache.find(
+    channel => channel.name === "𝐋𝐞𝐟𝐭"
+  );
+  let yaxi = member.user.avatarURL();
+  if (!channel) return;
+  const joinembed = new Discord.MessageEmbed()
+    .setTitle(
+      `left`
+    )
+    .setImage(
+      "https://thumbs.gfycat.com/ChiefBiodegradableAmericanalligator-size_restricted.gif"
+    )
+    .setColor("RANDOM")
+    .setThumbnail(jano)
+    .addField("👥|𝐍𝐀𝐌𝐄:", `${member}`)
+    .addField("<a:yaxi_13:799300705323188285>├baxerche mle shkaw┤<a:yaxi_13:799300705323188285>", `!`)
+    .addField("✶⊶⊷⊶⊷❍⊶⊷⊶⊷✶;(",   "<a:yaxi_12:799299644055748632>naya aw servera<a:yaxi_12:799299644055748632>")
+    .addField(
+      "⳺☟مــیــمــبەرەکــان ماوە⳻",
+      `${member.guild.memberCount}` + " ڪــەس"
+    )
+    .setFooter(`${member.guild.name}`)
+    .setTimestamp();
+  channel.send(joinembed);
+});
+
+/////////////// code embed
+yaxi.on("guildMemberAdd", member => {
+  const joinembed = new Discord.MessageEmbed()
+
+    .setColor("RANDOM")
+    .setTitle(
+      `__**A new member just arrived!**__`
+    )
+    .addField(
+      "<a:yaxi_28:799630995317850152>| name : ",
+      `${member}
+    · · • • • ✤ • • • · ·`
+    )
+    .addField(
+      "<a:yaxi_28:799630995317850152>| Welcome",
+      `Welcome to the server, ${member}
+    · · • • • ✤ • • • · ·`
+    )
+    .addField(
+      " <a:yaxi_16:799306063714451476>| User :",
+      "**[" + `${member.id}` + "]**"
+    )
+    .addField(
+      "<a:yaxi_16:799306063714451476>| Your are the member",
+      `${member.guild.memberCount}
+      · · • • • ✤ • • • · ·`
+    )
+    .addField("Server", `${member.guild.name}`, true)
+    .setFooter(`**${member.guild.name}**`)
+    .setTimestamp()
+    .setImage(
+      "https://media.discordapp.net/attachments/806608889805537309/808492139172200458/ImpracticalFearfulEsok-max-1mb.gif"
+    )
+    .setFooter(`${member.guild.name}`)
+    .setTimestamp();
+  member.send(joinembed);
+});
